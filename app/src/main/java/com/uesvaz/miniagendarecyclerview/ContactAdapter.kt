@@ -41,4 +41,9 @@ class ContactAdapter(val contactos: MutableList<Contact>) :
     override fun getItemCount(): Int {
         return contactos.size
     }
+
+    fun agregarContacto(contacto: Contact) {
+        contactos.add(contacto)
+        notifyItemInserted(contactos.size - 1)
+    }
 }
